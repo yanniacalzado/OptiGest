@@ -1,0 +1,32 @@
+Visión del Producto
+Desarrollamos un sistema de gestión de ópticas básico y fácil de usar que digitaliza operaciones clave como ingreso de pedidos, gestión de compras y control de consignaciones. Nuestro objetivo es reemplazar procesos manuales ineficientes y establecer una base sólida para futuras expansiones.
+Alcance
+Nos centraremos en las funcionalidades principales que abordan los mayores desafíos de las ópticas pequeñas y medianas.
+
+Requisitos del Frontend
+
+1.  Interfaz de Usuario (UI) y Experiencia de Usuario (UX):
+    Intuitiva y Amigable:La navegación y las interacciones deben ser lógicas y sencillas para cualquier usuario, minimizando la curva de aprendizaje.
+    Llamativa y Novedosa: El diseño visual debe ser moderno, estéticamente agradable y diferenciador. Esto incluye:
+        Uso de colores armoniosos y una paleta moderna.
+        Tipografía profesional y legible(ej. "Inter" u otra fuente moderna y gratuita).
+        Elementos con esquinas redondeadas para una apariencia suave.
+        Animaciones y transiciones sutiles que mejoren la experiencia sin distraer.
+        Diseño responsivo que se adapte perfectamente a dispositivos móviles, tablets y escritorios.
+        Inclusión de iconos modernos (se sugiere usar `lucide-react`).
+2.  Tecnología Frontend:
+    React: La aplicación debe ser desarrollada en React.
+    Estilización: Utilizar Tailwind CSS exclusivamente para todo el estilo.
+3.  Compatibilidad con Backend Django REST Framework (DRF):
+    La aplicación debe estar estructurada para consumir datos de una API RESTful** proporcionada por un backend DRF.
+    Incluir ejemplos de peticiones `fetch` (o `axios` si lo prefieres) simulando la interacción con endpoints de una API (ej. `GET /api/data`, `POST /api/items`). No es necesario que los endpoints existan, solo que la estructura para llamarlos esté presente.
+    Mostrar cómo se manejaría la carga de datos desde la API y la visualización en la interfaz.
+
+Estructura y Contenido del Código Solicitado
+
+Genera un único componente de React llamado `App`, que será la aplicación principal y exportado por defecto. Este componente debe incluir:
+
+Un diseño de layout básico que demuestre la interfaz "llamativa y novedosa" (ej., una cabecera, una sección de contenido principal con algunas tarjetas o elementos visuales, y un pie de página).
+Contenido de placeholder relevante (ej. texto, títulos, imágenes de ejemplo con `placehold.co`) para rellenar la interfaz y mostrar su potencial atractivo.
+Ejemplos de interacción con el usuario (ej. un botón, un campo de entrada) con estilos Tailwind CSS.
+Comentarios claros en el código explicando la estructura y las partes clave, especialmente las secciones destinadas a la interacción con la API.

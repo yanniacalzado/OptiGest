@@ -1,0 +1,129 @@
+
+Visión del Producto
+Desarrollamos un sistema de gestión de ópticas básico y fácil de usar que digitaliza operaciones clave como ingreso de pedidos, gestión de compras y control de consignaciones. Nuestro objetivo es reemplazar procesos manuales ineficientes y establecer una base sólida para futuras expansiones.
+Alcance
+Nos centraremos en las funcionalidades principales que abordan los mayores desafíos de las ópticas pequeñas y medianas.
+
+Requisitos del Frontend
+
+1.  Interfaz de Usuario (UI) y Experiencia de Usuario (UX):
+    Intuitiva y Amigable:La navegación y las interacciones deben ser lógicas y sencillas para cualquier usuario, minimizando la curva de aprendizaje.
+    Llamativa y Novedosa: El diseño visual debe ser moderno, estéticamente agradable y diferenciador. Esto incluye:
+        Uso de colores armoniosos y una paleta moderna.
+        Tipografía profesional y legible(ej. "Inter" u otra fuente moderna y gratuita).
+        Elementos con esquinas redondeadas para una apariencia suave.
+        Animaciones y transiciones sutiles que mejoren la experiencia sin distraer.
+        Diseño responsivo que se adapte perfectamente a dispositivos móviles, tablets y escritorios.
+        Inclusión de iconos modernos (se sugiere usar `lucide-react`).
+2.  Tecnología Frontend:
+    React: La aplicación debe ser desarrollada en React.
+    Estilización: Utilizar Tailwind CSS exclusivamente para todo el estilo.
+3.  Compatibilidad con Backend Django REST Framework (DRF):
+    La aplicación debe estar estructurada para consumir datos de una API RESTful** proporcionada por un backend DRF.
+    Incluir ejemplos de peticiones `fetch` (o `axios` si lo prefieres) simulando la interacción con endpoints de una API (ej. `GET /api/data`, `POST /api/items`). No es necesario que los endpoints existan, solo que la estructura para llamarlos esté presente.
+    Mostrar cómo se manejaría la carga de datos desde la API y la visualización en la interfaz.
+
+Estructura y Contenido del Código Solicitado
+
+Genera un único componente de React llamado `App`, que será la aplicación principal y exportado por defecto. Este componente debe incluir:
+
+Un diseño de layout básico que demuestre la interfaz "llamativa y novedosa" (ej., una cabecera, una sección de contenido principal con algunas tarjetas o elementos visuales, y un pie de página).
+Contenido de placeholder relevante (ej. texto, títulos, imágenes de ejemplo con `placehold.co`) para rellenar la interfaz y mostrar su potencial atractivo.
+Ejemplos de interacción con el usuario (ej. un botón, un campo de entrada) con estilos Tailwind CSS.
+Comentarios claros en el código explicando la estructura y las partes clave, especialmente las secciones destinadas a la interacción con la API.
+
+Módulos y Funcionalidades Clave
+1. Dashboard
+•	Panel de control principal con acceso rápido a las funcionalidades clave(Exámenes visuales, catálogo de productos, análisis de venta).
+•	Muestra información general (resúmenes de ventas mensual y diaria, consignaciones, citas, productos en inventario, citas recientes, ventas recientes y reportes (Resumen de inventario, ventas por categorias)).
+
+2. Productos 
+•	Maestro de productos:
+o	Atributos: Nombre, Categoría(Armazones, Lentes, Lentes de contacto, Accesorios), Proveedor, Stock, Precio, Estado (Normal, Bajo, Crítico), Tipo (Propio, Cpnsignaciones) y Acciones.
+o	Código único de producto.
+o	Vista general de productos disponibles.
+o	Cantidades básicas de stock (sin gestión avanzada por ahora).
+o	Filtros por tipo de producto o proveedor.
+o	Buscra por nombre, categoría o proveedor.
+o	Exportar a xls productos.
+
+3. Pacientes
+•	Registro y gestión de pacientes.
+•	Datos básicos: nombre, email, telefono, estado (Activo, Inactivo) contacto, historial de compras o servicios.
+•	Búsqueda y filtrado rápido de pacientes.
+•	Exportar a xls Pacientes.
+
+4. Citas
+•	Agenda de citas a pacientes (Nombre paciente, fecha, hora, tipo, doctor, estado, acciones).
+•	Visualización en lista y en calendario.
+•	Estado de la cita: Pendiente, Confirmada, Cancelada.
+
+5. Ventas: Gestión de Pedidos
+•	Ingreso manual de pedidos:
+o	Selección de cliente (existente o nuevo rápido).
+o	Selección de productos del catálogo y cantidad.
+o	Precio de venta editable.
+o	Campo de notas del pedido.
+o	Estado del pedido: Nuevo, En Proceso, Entregado, Cancelado.
+o	Generación automática de número de pedido.
+
+6. Compras: Órdenes de Compra
+•	Gestión de compras generadas a partir de ventas de productos en consignación:
+o	Datos a mostrar (Identificador, fecha, productos, valor total, estado, nota).
+o	Exportar a xls Compras.
+
+
+7. Consignaciones (MVP Manual)
+•	Registro manual de consignaciones recibidas:
+o	Datos: Proveedor, producto, categoría, cantidad, fechas de consignación.
+o	Estado de la consignación: Activa, Devuelta, Vendida.
+o	Vinculación con venta y registro de devoluciones.
+•	Preparación para integración con API de Telko (botón Sync Telko)
+	Exportar a xls Consignaciones.
+
+8. POS (Punto de Venta)
+•	Punto de venta ágil y simplificado.
+•	Selección de productos y cliente.
+•	Registro de ventas rápidas con impresión de tickets.
+
+9. Recetas
+•	Registro y gestión de recetas ópticas vinculadas a pacientes.
+•	Datos: fecha, profesional responsable, observaciones y productos recomendados.
+•	Vinculación con pedidos de venta.
+
+10. Reportes
+•	Generación de reportes y análisis..
+•	Ventas, compras, consignaciones y citas, pacientes atendidos, distribución de ventas, inventario por categorías.
+•	Descarga en formatos estándar (PDF, Excel).
+
+11. Ajustes
+•	Configuración general del sistema.
+•	Gestión de roles de usuario (Admin, Vendedor).
+•	Parámetros básicos de la óptica.
+
+Requisitos No Funcionales 
+•	Usabilidad: Interfaz intuitiva para personal con poca experiencia en tecnología.
+•	Rendimiento: Respuestas rápidas para operaciones básicas.
+•	Seguridad: Autenticación básica y roles (Admin, Vendedor).
+•	Escalabilidad: Arquitectura flexible para añadir funcionalidades futuras.
+•	Disponibilidad: Alta disponibilidad para operaciones diarias.
+•	Mínima Intervención: Pasos sencillos para completar cada tarea.
+
+Métricas de Éxito 
+•	Adopción: Número de usuarios activos diarios.
+•	Eficiencia: Reducción en el tiempo de registro de pedidos y consignaciones.
+•	Satisfacción del Usuario: Retroalimentación positiva sobre facilidad de uso.
+•	Precisión de Datos: Reducción de errores en registros.
+
+
+Nota Final:
+Este sistema está enfocado en proporcionar valor rápidamente, resolver problemas críticos y validar la necesidad del sistema antes de expandir funcionalidades. La simplicidad será clave para un lanzamiento exitoso.
+
+
+Integración completa con backend Django REST Framework
+Autenticación y sistema de roles (Admin/Vendedor)
+Integración con API de Telko para consignaciones
+Reportes avanzados con exportación PDF/Excel
+Gestión avanzada de inventario
+Sistema de notificaciones
+Impresión de tickets y recetas
